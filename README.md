@@ -75,3 +75,37 @@ chmod 744 ./bin/install_terraform_cli.sh
 ### Github lifecycle (Before, init, Command)
 
 We need to be careful when using the init
+
+
+### Working with env veriables
+
+
+We can list out all enviorment vars (env vars) using the 'env' command
+We can filter specific en vars using grep e.g. `env |grep AWS_`
+
+#### Setting and unsetting env vars
+
+In the terminal we can set using `export HELLO='world'`
+
+In the terminal we can unset using `unset HELLO`
+
+We can set env var temporarily when running a command
+```
+HELLO='world' ./bin/print_message
+
+```
+```
+#!/usr/bin/env bash
+
+HELLO='world'
+
+echo $HELLO
+```
+
+#### Printing vars
+
+We can print an env using echo e.g. `echo hello`
+
+#### Scoping of env vars
+When you open up new bash terminals in vs code it will not be aware of env vars in another window.
+If you want to persist across all future bash terminals you need to set in your bash profile
