@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+cd /workspace
 sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
 
 wget -O- https://apt.releases.hashicorp.com/gpg | \
@@ -12,3 +13,5 @@ sudo tee /etc/apt/sources.list.d/hashicorp.list
 sudo apt update
 
 sudo apt-get install terraform -y
+
+cd $PROJECT_ROOT
