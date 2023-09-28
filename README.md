@@ -144,3 +144,9 @@ If you lose this file you lose knowing your state
 ### Terraform Directory
 
 `terraform` directory contains binaries of terraform providers.
+
+#### Terraform Destroy
+`terraform destroy`
+This will destroy resources.
+
+
