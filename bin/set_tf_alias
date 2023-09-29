@@ -1,19 +1,18 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-# Define the alias command
-alias_command='alias tf="terraform"'
+# Define the alias
+alias_line='alias tf="terraform"'
 
-# Check if .bashrc exists, if not, create it
-if [ ! -f ~/.bashrc ]; then
-  touch ~/.bashrc
-fi
-
-# Check if the alias is already defined in .bashrc
-if ! grep -q "$alias_command" ~/.bashrc; then
-  # If not defined, add the alias to .bashrc
-  echo "$alias_command" >> ~/.bashrc
-  echo "Alias 'tf' for 'terraform' has been added to ~/.bashrc."
+# Check if .bash_profile exists
+if [ -f ~/.bash_profile ]; then
+  # Check if the alias is already present in .bash_profile
+  if ! grep -q "$alias_line" ~/.bash_profile; then
+    # If not, add the alias to .bash_profile
+    echo "$alias_line" >> ~/.bash_profile
+    echo "Alias 'tf' has been added to .bash_profile."
+  else
+    echo "Alias 'tf' is already present in .bash_profile."
+  fi
 else
-  # If already defined, display a message
-  echo "Alias 'tf' for 'terraform' already exists in ~/.bashrc."
+  echo "Error: ~/.bash_profile does not exist. Please create it and then run this script."
 fi
