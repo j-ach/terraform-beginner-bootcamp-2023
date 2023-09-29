@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# Define the alias command
+alias_command='alias tf="terraform"'
+
+# Check if .bashrc exists, if not, create it
+if [ ! -f ~/.bashrc ]; then
+  touch ~/.bashrc
+fi
+
+# Check if the alias is already defined in .bashrc
+if ! grep -q "$alias_command" ~/.bashrc; then
+  # If not defined, add the alias to .bashrc
+  echo "$alias_command" >> ~/.bashrc
+  echo "Alias 'tf' for 'terraform' has been added to ~/.bashrc."
+else
+  # If already defined, display a message
+  echo "Alias 'tf' for 'terraform' already exists in ~/.bashrc."
+fi
