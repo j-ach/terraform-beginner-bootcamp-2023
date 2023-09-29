@@ -1,4 +1,10 @@
 terraform {
+    cloud {
+    organization = "terraformpracticej_a"
+    workspaces {
+      name = "terra-house-new-rug"
+    }
+  }
   required_providers {
     random = {
       source = "hashicorp/random"
