@@ -72,7 +72,7 @@ alternatively
 ```sh
 chmod 744 ./bin/install_terraform_cli.sh
 ```
-### Github lifecycle (Before, init, Command)
+### Gitpod lifecycle (Before, init, Command)
 
 We need to be careful when using the init
 
