@@ -1,5 +1,12 @@
 # Terraform Beginner Bootcamp 2023
 
+## Table of Context
+
+- [Installing terraform cli](#install-the-terraform-cli)
+    - [Considerations for linux distribution](#considerations-for-linux-distribution)
+- [Refactoring into bash scripts](#refactoring-into-bash-scripts)
+
+
 ## Install the terraform CLI
 
 ### Considerations wtih the Terraform CLI changes
@@ -31,7 +38,7 @@ PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-poli
 UBUNTU_CODENAME=jammy
 ```
 
-### Refactoring into bash scripts
+## Refactoring into bash scripts
 
 While fixing the Terraform CLI gpg depreciation issues we notice that the bash script steps were considerable amount more code. so we decided to create a bash scrip to install the terraform CLI
 
