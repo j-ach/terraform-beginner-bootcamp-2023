@@ -1,10 +1,31 @@
-# Terraform Beginner Bootcamp 2023
+# Terraform Beginner Bootcamp 2023 - week 0
 
-<img width="543" alt="Screenshot 2023-09-30 at 23 55 00" src="https://github.com/j-ach/terraform-beginner-bootcamp-2023/assets/95240000/5d0ccc4b-e0ee-43c9-b977-b39110e66054">
+- [Install the terraform CLI](#install-the-terraform-cli)
+  * [Considerations wtih the Terraform CLI changes](#considerations-wtih-the-terraform-cli-changes)
+  * [Considerations for linux distribution](#considerations-for-linux-distribution)
+- [Refactoring into bash scripts](#refactoring-into-bash-scripts)
+  * [Shebang considerations](#shebang-considerations)
+- [Execution Considerations](#execution-considerations)
+    + [linux permissions considerations](#linux-permissions-considerations)
+  * [Github lifecycle (Before, init, Command)](#github-lifecycle--before--init--command-)
+  * [AWS cli installation](#aws-cli-installation)
+- [Terraform basics](#terraform-basics)
+  * [Terraform registry](#terraform-registry)
+  * [Terrafform Console](#terrafform-console)
+    + [Terrform init](#terrform-init)
+    + [Terraform plan](#terraform-plan)
+    + [Terraform apply](#terraform-apply)
+  * [Terraform Lock Files](#terraform-lock-files)
+  * [Terraform state file](#terraform-state-file)
+  * [Terraform Directory](#terraform-directory)
 
-<<<<<<< 19-create-toc-readme
-## Weekly Journals
-=======
+- [Installing terraform cli](#install-the-terraform-cli)
+    - [Considerations for linux distribution](#considerations-for-linux-distribution)
+- [Refactoring into bash scripts](#refactoring-into-bash-scripts)
+
+
+## Install the terraform CLI
+
 ### Considerations wtih the Terraform CLI changes
 The terraform CLI installation intructions have changed due to gpg keyring changes. So we needed to refer to the latest instal CLI. instruction via terrafirm documentation and change the srcipting for install
 
@@ -34,7 +55,7 @@ PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-poli
 UBUNTU_CODENAME=jammy
 ```
 
-### Refactoring into bash scripts
+## Refactoring into bash scripts
 
 While fixing the Terraform CLI gpg depreciation issues we notice that the bash script steps were considerable amount more code. so we decided to create a bash scrip to install the terraform CLI
 
@@ -75,7 +96,7 @@ alternatively
 ```sh
 chmod 744 ./bin/install_terraform_cli.sh
 ```
-### Gitpod lifecycle (Before, init, Command)
+### Github lifecycle (Before, init, Command)
 
 We need to be careful when using the init
 
@@ -151,10 +172,6 @@ If you lose this file you lose knowing your state
 #### Terraform Destroy
 `terraform destroy`
 This will destroy resources.
->>>>>>> main
 
-- [Week 0 Journal](/journal/week0.md)
-- [Week 1 Journal](/journal/week1.md)
 
-## Extras
-- [github markdown toc generator](https://ecotrust-canada.github.io/markdown-toc/)
+
