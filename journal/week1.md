@@ -66,4 +66,21 @@ This is the default file to load in terraform variables in
 
 ### order of terraform variables
 
-- TODO: document which terraform variables take spredesen 
+- TODO: document which terraform variables take predesence 
+
+
+## Dealing with configuration drift
+
+## What happens if you lose your state file
+
+If you lose your statefile, you most likeley have to tear down all the resources manually.
+
+You can use terraform import but it wont work for all resources 
+### Fix manual configuration
+If someone go and delete or modifies cloud resource manually through clickops.
+
+If we run terraform plan is with attempt tro put our infrastructure back into the expected state fixing Configuration drift 
+
+### Fix missing resources with Terraform import 
+
+[terraform import](https://developer.hashicorp.com/terraform/tutorials/state/state-import?utm_source=WEBSITE&utm_medium=WEB_IO&utm_offer=ARTICLE_PAGE&utm_content=DOCS)
