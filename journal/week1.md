@@ -81,10 +81,11 @@ If someone go and delete or modifies cloud resource manually through clickops.
 
 If we run terraform plan is with attempt tro put our infrastructure back into the expected state fixing Configuration drift 
 
+##
 ### Fix missing resources with Terraform import 
 
 [terraform import](https://developer.hashicorp.com/terraform/tutorials/state/state-import?utm_source=WEBSITE&utm_medium=WEB_IO&utm_offer=ARTICLE_PAGE&utm_content=DOCS)
-
+## Fix using terraform
 ## Terraform Modules
 
 ### Terraform modules Structure
