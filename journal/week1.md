@@ -84,3 +84,26 @@ If we run terraform plan is with attempt tro put our infrastructure back into th
 ### Fix missing resources with Terraform import 
 
 [terraform import](https://developer.hashicorp.com/terraform/tutorials/state/state-import?utm_source=WEBSITE&utm_medium=WEB_IO&utm_offer=ARTICLE_PAGE&utm_content=DOCS)
+
+## Terraform Modules
+
+### Terraform modules Structure
+It is reccommended to place modules in a `module` directory when locally developing modules but you can name it whatever you like.
+### Passing Input Variables 
+
+We can pass input variables to our module.
+The module has to delare the terraform variables in its own variable.tf
+
+## Modules Sources
+Using the source we can import the source from multiple places eg:
+- locally
+- github
+- Terraform Registry
+
+```terrform
+module "terrahouse_aws" {
+  source = "./modules/terrahouse_aws"
+  user_uuid = var.user_uuid
+  bucket_name = var.bucket_name
+}
+```

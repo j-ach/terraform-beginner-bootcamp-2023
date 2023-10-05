@@ -1,18 +1,8 @@
 
-
-
-resource "random_string" "bucket_name" {
-  upper = false
-  length           = 30
-  special          = false
-
-}
-
-resource "aws_s3_bucket" "example1"{
-  bucket = random_string.bucket_name.result
-
-  tags = {
-    UserUuid = var.user_uuid
-  }
+module "terrahouse_aws" {
+  source = "./modules/terrahouse_aws"
+  user_uuid = var.user_uuid
+  bucket_name = var.bucket_name
+  
 }
 
